@@ -1,0 +1,43 @@
+@import '../../variables.scss';
+
+.AboutCompany{
+    padding: 100px 0;
+    width: 100%;
+    height: auto;
+    background: rgb(32, 32, 32);
+    display: flex;
+    .leftColumn{
+        // border: 1px solid red;
+        width: 40%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        p{
+            position: relative;
+            font-size: 2rem;
+            color: $colorWhite;
+            &::after{
+                position: absolute;
+                content: '';
+                bottom: -15px;
+                left: 0;
+                width: 200%;
+                height: 2px;
+                background: $colorGold;
+            }
+        }
+    }
+    .rightColumn{
+        // border: 1px solid red;
+        padding: 50px 100px;
+        width: 60%;
+        height: 100%;
+        p{
+            font-size: 1rem;
+            letter-spacing: 2px;
+            line-height: 2rem;
+            color: $colorWhite;
+        }
+    }
+}

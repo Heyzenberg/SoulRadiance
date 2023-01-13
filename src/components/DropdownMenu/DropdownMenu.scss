@@ -1,0 +1,45 @@
+@import '../../variables.scss';
+
+.DropdownMenu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background: $colorBlack;
+    transform: translateX(-100%);
+    transition: 0.6s;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    &.active{
+        transform: translateX(0%);
+    }
+    a{
+        font-size: 2rem;
+        color: $colorGold;
+        transition: 0.4s;
+        &:hover{
+            transform: translateX(3px);
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+        }
+    }
+    button{
+        font-size: 2rem;
+        color: $colorGold;
+        transition: 0.4s;
+        padding: 15px;
+        background: black;
+        border-radius: 3px;
+        cursor: pointer;
+        border: 1px solid rgba(255, 215, 0, 0.1);
+        &:hover{
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+    }
+}

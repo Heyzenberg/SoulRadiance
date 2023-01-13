@@ -1,0 +1,59 @@
+@import '../../../variables.scss';
+
+.Menu{
+    position: relative;
+    // border: 1px solid red;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+    span{
+        width: 60%;
+        height: 2px;
+        background: $colorGold;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%);
+        transition: 0.4s;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 60%;
+            height: 2px;
+            background: $colorGold;
+            top: -1000%;
+            transition: 0.4s;
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            width: 80%;
+            height: 2px;
+            background: $colorGold;
+            color: white;
+            top: 1000%;
+            transition: 0.4s;
+        }
+    }
+    &.active{
+        span{
+            transform: rotate(45deg);
+            left: 20%;
+            &::before{
+                width: 100%;
+                top: -100%;
+                left: 0%;
+                transform: rotate(90deg);
+            }
+            &::after{
+                top: 1000%;
+                transform: translateX(300%);
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+        
+    }
+}
